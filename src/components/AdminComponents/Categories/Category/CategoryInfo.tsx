@@ -1,20 +1,20 @@
 import { IonButton, IonCol, IonGrid, IonIcon, IonLabel, IonRow } from '@ionic/react';
-import {closeCircleOutline, earthOutline, trashOutline} from 'ionicons/icons'
-import './HeadingList.css';
+import {pricetagOutline, trashOutline} from 'ionicons/icons'
+import './CategoryInfo.css';
 interface ContainerProps { }
 
-const HeadingList: React.FC<ContainerProps> = () => {
+const CategoryInfo: React.FC<ContainerProps> = () => {
   return (
-    <div className="HeadingItemList">
-        <IonIcon icon={earthOutline}/>
+    <div className="CategoryInfo">
+        <IonIcon icon={pricetagOutline}/>
         <IonGrid>
             <IonRow>
                 <IonCol size="10">
                     <div>
-                        <strong>NombreRubro</strong>
+                        <strong>NombreCategoria</strong>
                     </div>
                     <div>
-                        <IonLabel>DescripcionRubro</IonLabel>
+                        <IonLabel>DescripcionCategoria</IonLabel>
                     </div>
                 </IonCol>
                 <IonCol size="2">
@@ -28,4 +28,4 @@ const HeadingList: React.FC<ContainerProps> = () => {
   );
 };
 
-export default HeadingList;
+export default CategoryInfo;

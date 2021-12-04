@@ -1,26 +1,24 @@
-import { IonButton, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonRow } from '@ionic/react';
-import {closeCircleOutline, personOutline, scale, trashOutline} from 'ionicons/icons'
-import './UserList.css';
+import { IonButton, IonCol, IonGrid, IonIcon, IonLabel, IonRow } from '@ionic/react';
+import {closeCircleOutline, storefrontOutline, trashOutline} from 'ionicons/icons'
+import './StoreInfo.css';
+
 interface ContainerProps { }
 
-const UserItemList: React.FC<ContainerProps> = () => {
+const StoreInfo: React.FC<ContainerProps> = () => {
   return (
-    <div className="UserItemList">
-        <IonIcon icon={personOutline}/>
+    <div className="StoreInfo">
+        <IonIcon icon={storefrontOutline}/>
         <IonGrid>
             <IonRow>
                 <IonCol size="10">
                     <div>
-                        <strong>UserName</strong>
+                        <strong>StoreName</strong>
                     </div>
                     <div>
-                        <IonLabel>UserLastname</IonLabel>
+                        <IonLabel>StoreRUC</IonLabel>
                     </div>
                     <div>
-                        <IonLabel>UserEmail</IonLabel>
-                    </div>
-                    <div>
-                        <IonLabel>UserPhoneNumber</IonLabel>
+                        <IonLabel>StoreMail</IonLabel>
                     </div>
                 </IonCol>
                 <IonCol size="2">
@@ -37,4 +35,4 @@ const UserItemList: React.FC<ContainerProps> = () => {
   );
 };
 
-export default UserItemList;
+export default StoreInfo;

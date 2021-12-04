@@ -1,7 +1,8 @@
 import React from 'react'
-import {IonCol, IonGrid, IonHeader,IonPage, IonRow, IonTitle, IonToolbar} from '@ionic/react'
+import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonItem, IonPage, IonRow, IonTitle, IonToolbar} from '@ionic/react'
 import './Admin.css'
 import ContentManager from '../../components/AdminComponents/ContentManager/ContentManager'
+import { person, personOutline, personRemove } from 'ionicons/icons'
 
 const Admin: React.FC = () =>
 {
@@ -10,17 +11,16 @@ const Admin: React.FC = () =>
             <IonHeader>
                 <IonToolbar>
                     <IonTitle>
-                        Vista de administracion
+                        Administracion
                     </IonTitle>
+                    <IonButton slot="end" shape="round" color="success">
+                        <IonIcon icon={person}/>
+                    </IonButton>
                 </IonToolbar>
             </IonHeader>
-            <IonGrid>
-                <IonRow>
-                    <IonCol>
-                        <ContentManager/>
-                    </IonCol>
-                </IonRow>
-            </IonGrid>
+            <IonContent>
+                            <ContentManager/>
+            </IonContent>
         </IonPage>    
     );
 }
